@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agenda</title>
+    <title>Lista Contatos</title>
 
      <!-- Incluindo o arquivo CSS do Bootstrap via CDN -->
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -13,6 +13,7 @@
      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
      <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
 </head>
 <body>
 
@@ -23,28 +24,25 @@
             <button onclick="window.location.href = 'listaContatos.html'" class="btn btn-primary">Lista de Contatos</button>
         </div>
     </div>
-    
-    <div class="container mt-5">
-        <h1>Cadastrar Contato</h1>
-        
-        <form id="form-contact">
-            <div class="form-group">
-                <label for="nome">Nome:</label>
-                <input type="text" class="form-control" id="nome" placeholder="Digite seu nome">
-            </div>
-            
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" class="form-control" id="email" placeholder="Digite seu email">
-            </div>
-
-            <div class="form-group">
-                <label for="telefone">Telefone:</label>
-                <input type="telefone" class="form-control" id="tel" placeholder="Digite seu telefone">
-            </div>
-            <button type="submit" class="btn btn-primary">Enviar</button>
-        </form>
-        <script src="js/script.js"></script>
+    <div class="container">
+        <table id="tabelaContatos" class="table table-bordered text-center mt-5">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Telefone</th>
+                    <th>Email</th>
+                    <th>Ação</th>
+                </tr>
+             </thead>
+            <tbody>
+                <!-- Linhas da tabela serão adicionadas aqui via JavaScript -->
+            </tbody>
+        </table>
     </div>
+
+
+
+    <script src="js/scriptLista.js"></script>
+    
 </body>
 </html>

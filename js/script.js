@@ -14,16 +14,20 @@ document.getElementById("form-contact").addEventListener("submit", function(even
         email: email,
         telefone: telefone
     }
-    const url = 'http://localhost:8080/agenda';
+    const url = 'http://localhost:8080/contatos';
 
     axios.post(url, data,{
     }).then(response => {
         console.log("Funcionou: ", response);
     }).catch( error => {
         console.log("DEU ERRO: ", error);
+        
     })
 
 })
+
+
+
 
 
 
