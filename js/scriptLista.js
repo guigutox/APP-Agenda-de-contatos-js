@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     <td>${contato.nome}</td>
                     <td>${contato.telefone}</td>
                     <td>${contato.email}</td>
-                    <td><button class="btn btn-danger" >Deletar</button></td>
+                    <td><button class="btn btn-danger" onclick="apagar(${contato.telefone})" >Deletar</button></td>
                 `;
                 tableBody.appendChild(row);
             });
@@ -24,3 +24,12 @@ document.addEventListener("DOMContentLoaded", function() {
         });
 
 });
+
+
+
+function apagar(telefone) {
+    const url = `http://localhost:8080/contatos/${telefone}`;
+    
+
+
+}
